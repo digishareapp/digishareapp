@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Spinner from "../Global/Spinner";
 
 const Login = ({ LOGIN, address, connect, setSignUp, setLogin }) => {
   const [user, setUser] = useState({
@@ -20,8 +21,8 @@ const Login = ({ LOGIN, address, connect, setSignUp, setLogin }) => {
           <div class="col-md-5 col-sm-12 col-12 align-self-center">
             <div class="sign-user_card">
               <img
-                src="../assets/images/logo.png"
-                class="img-fluid rounded-normal light-logo logo"
+                src="../assets/images/logo-log.png"
+                class="img-fluid rounded-normal light-logo custom-logo-size"
                 alt="logo"
               />
               <h3 class="mb-3">Sign In</h3>
@@ -54,9 +55,11 @@ const Login = ({ LOGIN, address, connect, setSignUp, setLogin }) => {
                 {address ? (
                   <button
                     onClick={() => CALLING_LOGIN(user)}
-                    class="btn btn-primary"
+                    class="btn btn-primary flex flex-row"
                   >
-                    Sign In
+                    {" "}
+                    {/* <Spinner /> */}
+                    <span>Sign In</span>
                   </button>
                 ) : (
                   <button onClick={() => connect()} class="btn btn-primary">

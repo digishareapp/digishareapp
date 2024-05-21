@@ -1,5 +1,6 @@
 import "../styles/globals.css";
-
+import "./index.css";
+import "./globals.css";
 //INTERNAL IMPORT
 import { CONTEXT_Provider } from "../context/context";
 import toast, { Toaster } from "react-hot-toast";

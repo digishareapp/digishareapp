@@ -44,13 +44,8 @@ const SideBar = ({
       <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
         <a class="header-logo">
           <img
-            src="../assets/images/logo.png"
-            class="img-fluid rounded-normal light-logo"
-            alt="logo"
-          />
-          <img
-            src="../assets/images/logo-white.png"
-            class="img-fluid rounded-normal darkmode-logo"
+            src="../assets/images/logo-log.png"
+            class="img-fluid  darkmode-logo"
             alt="logo"
           />
         </a>

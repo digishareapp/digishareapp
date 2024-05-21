@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("../public/assets/css/backend-plugin.min.css");
 @import url("../public/assets/css/backend.css?v=1.0.0");
 @import url("../public/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css");
@@ -10,7 +14,10 @@
 @import url("../public/assets/vendor/doc-viewer/include/verySimpleImageViewer/css/jquery.verySimpleImageViewer.css");
 @import url("../public/assets/vendor/doc-viewer/include/officeToHtml/officeToHtml.css");
 
-/* //NEW SIDEBAR */
+.custom-logo-size {
+  width: 100px; /* Set the desired width */
+  height: 100px; /* Set the desired height */
+}
 
 .sidebar-new {
   overflow-y: auto;
