@@ -1,23 +1,68 @@
 import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 
-//INTERNAL IMPORT
+// INTERNAL IMPORT
 import FileSharingDApp from "./FileSharingDApp.json";
 
-//FILESHARING
+// FILESHARING
 export const FILE_SHARING_ADDRESS =
-  // "0xd945e5AAf747f1694C4a3b7eA2273878605a11F1";
   "0x10a3b833f1D81741d1619C84e7ae682d077CCE9D";
 const FILE_SHARING_ABI = FileSharingDApp.abi;
 
+const BitTorrent = {
+  chainId: "0x405", // 1029 in hexadecimal
+  name: "BitTorrent Chain Donau",
+  currency: {
+    name: "BitTorrent",
+    symbol: "BTTC",
+    decimals: 18,
+  },
+  rpcUrls: ["https://pre-rpc.bt.io/"],
+  blockExplorerUrls: ["https://testscan.bt.io"],
+};
+
 const fetchContract = (signer, ABI, ADDRESS) =>
   new ethers.Contract(ADDRESS, ABI, signer);
+
+const switchToBitTorrentChain = async () => {
+  const { ethereum } = window;
+  if (!ethereum) {
+    console.log("Metamask is not installed.");
+    return;
+  }
+
+  try {
+    await ethereum.request({
+      method: "wallet_switchEthereumChain",
+      params: [{ chainId: BitTorrent.chainId }],
+    });
+  } catch (switchError) {
+    // This error code indicates that the chain has not been added to MetaMask.
+    if (switchError.code === 4902) {
+      try {
+        await ethereum.request({
+          method: "wallet_addEthereumChain",
+          params: [BitTorrent],
+        });
+      } catch (addError) {
+        console.error("Failed to add the network:", addError);
+      }
+    } else {
+      console.error("Failed to switch network:", switchError);
+    }
+  }
+};
 
 export const web3Provider = async () => {
   try {
     const web3modal = new Web3Modal();
     const connection = await web3modal.connect();
     const provider = new ethers.providers.Web3Provider(connection);
+
+    const network = await provider.getNetwork();
+    if (network.chainId !== parseInt(BitTorrent.chainId, 16)) {
+      await switchToBitTorrentChain();
+    }
 
     return provider;
   } catch (error) {
@@ -27,12 +72,10 @@ export const web3Provider = async () => {
 
 export const FILE_SHARING_Contract = async () => {
   try {
-    const web3modal = new Web3Modal();
-    const connection = await web3modal.connect();
-    const provider = new ethers.providers.Web3Provider(connection);
-
+    const provider = await web3Provider();
+    const signer = provider.getSigner();
     const contract = fetchContract(
-      provider,
+      signer,
       FILE_SHARING_ABI,
       FILE_SHARING_ADDRESS
     );
@@ -44,11 +87,8 @@ export const FILE_SHARING_Contract = async () => {
 
 export const getBalance = async () => {
   try {
-    const web3modal = new Web3Modal();
-    const connection = await web3modal.connect();
-    const provider = new ethers.providers.Web3Provider(connection);
+    const provider = await web3Provider();
     const signer = provider.getSigner();
-
     return await signer.getBalance();
   } catch (error) {
     console.log(error);

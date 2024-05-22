@@ -131,14 +131,14 @@ const Upload = ({
                       <option>PDF</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  {/* <div class="form-group">
                     <label for="furl">Notic</label>
                     <p>
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                       Alias consequatur inventore laudantium exercitationem
                       tempore amet error itaque!
                     </p>
-                  </div>
+                  </div> */}
                 </form>
               </div>
             </div>
@@ -210,7 +210,7 @@ const Upload = ({
                           type="text"
                           class="form-control"
                           id="cname"
-                          placeholder="Company Name"
+                          placeholder="File title"
                         />
                       </div>
                       <div class="form-group col-md-12">
@@ -233,7 +233,7 @@ const Upload = ({
                           class="form-control"
                           id="selectcountry"
                         >
-                          <option>Select Country</option>
+                          <option>Select Visibility</option>
                           <option>True</option>
                           <option>False</option>
                         </select>
