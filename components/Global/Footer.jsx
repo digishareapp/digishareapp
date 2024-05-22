@@ -16,9 +16,9 @@ const Footer = () => {
             </ul>
           </div>
           <div class="col-lg-6 text-right">
-            <span class="mr-1">@theblockchaincoders</span>
+            <span class="mr-1">@digishare.app@gmail.com</span>
             <a href="#" class="">
-              By Daulat Hussain
+              Digishare.app
             </a>
             .
           </div>

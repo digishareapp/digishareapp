@@ -49,7 +49,7 @@ const MyVideo = ({ getAllUserFiles, LOAD_INITIAL_DATA }) => {
                           <a>My Drive</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                          Alexa Workshop
+                          Digishare.app
                         </li>
                       </ul>
                     </nav>

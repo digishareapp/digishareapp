@@ -1,18 +1,20 @@
 import React from "react";
 
 const License = ({ currentUser, generateCertificated }) => {
+  console.log(currentUser);
+  console.log(generateCertificated);
   return (
     <div class="certificate-container">
       <div class="certificate">
         <div class="water-mark-overlay"></div>
         <div class="certificate-header">
-          <img src="../assets/images/loader.gif" class="logo" alt="" />
+          <img src="../assets/images/logoo.png" class="logo" alt="" />
         </div>
         <div class="certificate-body">
           <p class="certificate-title">
-            <strong>CloudBOX Marketplace For Digital Assects License</strong>
+            <strong>Digishare Digital Assects License</strong>
           </p>
-          <h1>Copyright Certificate </h1>
+          <h1 style={{ color: "#000000" }}>Copyright Certificate </h1>
           <p class="student-name">{currentUser?.name}</p>
           <div class="certificate-content">
             <p class="topic-title">{generateCertificated?.fileName}</p>

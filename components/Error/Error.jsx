@@ -8,8 +8,10 @@ const Error = () => {
           <div class="iq-error position-relative">
             <img
               src="../assets/images/error/404.png"
-              class="img-fluid iq-error-img"
+              class="img-fluid iq-error-img "
               alt=""
+              width={200}
+              height={200}
             />
             <h2 class="mb-0 mt-4">Oops! There is no files.</h2>
             <p>Kindly create your first file now!</p>

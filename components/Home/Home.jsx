@@ -114,7 +114,7 @@ const Home = ({
                     </ul>
                   </div>
                 </div>
-                <div class="dashboard1-dropdown d-flex align-items-center">
+                {/* <div class="dashboard1-dropdown d-flex align-items-center">
                   <div class="dashboard1-info">
                     <a
                       href="#calander"
@@ -168,7 +168,7 @@ const Home = ({
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -192,7 +192,7 @@ const Home = ({
                       dapp
                     </p>
                     <a>
-                      Try Now
+                      View Files
                       <i class="las  ml-2">
                         <IoIosArrowRoundForward />
                       </i>
@@ -528,7 +528,7 @@ const Home = ({
                 <p>
                   Expanded Storage, Access To
                   <br />
-                  More Features On CloudBOX
+                  More Features On Digishare
                 </p>
                 <div class="row align-items-center justify-content-between">
                   <div class="col-6 go-white">

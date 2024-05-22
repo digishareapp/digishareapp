@@ -23,11 +23,10 @@ const SignUp = ({ SIGN_UP, connect, address, setSignUp, setLogin }) => {
           <div class="col-md-5 col-sm-12 col-12 align-self-center">
             <div class="sign-user_card">
               <img
-                src="../assets/images/logo.png"
-                class="img-fluid rounded-normal light-logo logo"
+                src="../assets/images/logo-log.png"
+                class="img-fluid rounded-normal light-logo custom-logo-size"
                 alt="logo"
               />
-
               <h3 class="mb-3">Sign Up</h3>
               <p>Create your account.</p>
               <div>

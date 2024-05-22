@@ -36,11 +36,6 @@ const Header = ({ currentUser, setOpenComponent }) => {
               <LuMenu />
             </i>
             <a href="index.html" class="header-logo">
-              {/* <img
-                src="../assets/images/logo.png"
-                class="img-fluid rounded-normal light-logo"
-                alt="logo"
-              /> */}
               <img
                 src="../assets/images/logo-log.png"
                 class="img-fluid  darkmode-logo"
