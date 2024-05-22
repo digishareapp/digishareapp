@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+import "./Batch.sol";
 
 import "@chainlink/contracts/src/v0.8/vrf/VRFConsumerBase.sol";
 
@@ -56,6 +57,7 @@ contract FileSharingDApp is VRFConsumerBase {
     mapping(address => User) public users;
     File[] public publicFiles;
     User[] getAllUsers;
+    Batch internal batchContract;
 
     event FileShared(address indexed owner, string fileName, string fileHash, bool isPublic);
     event FileCertificate(address indexed owner, address indexed buyer, string fileName, string fileHash);
@@ -82,6 +84,8 @@ contract FileSharingDApp is VRFConsumerBase {
         owner = msg.sender;
         keyHash = _keyHash;
         fee = _fee;
+        batchContract = Batch(0x0000000000000000000000000000000000000808); 
+
     }
 
     function createFile(
@@ -96,7 +100,6 @@ contract FileSharingDApp is VRFConsumerBase {
 
         bytes32 requestId = requestRandomNumber();
         requestIdToSender[requestId] = msg.sender;
-        // Temporarily store file data until randomness is fulfilled
     }
 
     function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
@@ -208,7 +211,6 @@ contract FileSharingDApp is VRFConsumerBase {
     }
 
     function login(string memory _password) public onlyRegisteredUser returns (address, string memory, bool) {
-        // In a real-world scenario, you would compare the hashed password
         require(
             keccak256(abi.encodePacked(_password)) == keccak256(abi.encodePacked(users[msg.sender].password)),
             "Invalid password"
@@ -224,7 +226,6 @@ contract FileSharingDApp is VRFConsumerBase {
     }
 
     function resetPassword(string memory _newPassword) public onlyRegisteredUser {
-        // In a real-world scenario, you would hash the new password before storing it
         users[msg.sender].password = _newPassword;
     }
 
@@ -232,7 +233,6 @@ contract FileSharingDApp is VRFConsumerBase {
         return getAllUsers;
     }
 
-    // Chainlink VRF
     function requestRandomNumber() public returns (bytes32 requestId) {
         require(LINK.balanceOf(address(this)) >= fee, "Not enough LINK - fill contract with faucet");
         requestId = requestRandomness(keyHash, fee);
