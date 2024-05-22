@@ -146,7 +146,7 @@ const User = ({
           </div>
           <div class="col-lg-7 col-md-6">
             <div class="row">
-              <div class="col-md-12 col-lg-6">
+              <div class="col-md-12 col-lg-12">
                 <div class="card card-block card-stretch card-height">
                   <div class="card-header">
                     <div class="header-title">
@@ -239,7 +239,7 @@ const User = ({
                   </div>
                 </div>
               </div>
-              <div class="col-md-12 col-lg-6">
+              {/* <div class="col-md-12 col-lg-6">
                 <div class="card card-block card-stretch card-height">
                   <div class="card-header">
                     <div class="header-title">
@@ -291,7 +291,7 @@ const User = ({
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div class="col-lg-12">
                 <div class="card card-block card-stretch card-height">
@@ -373,7 +373,7 @@ const User = ({
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+          {/* <div class="col-lg-4 col-md-6">
             <div class="card card-block card-stretch card-height">
               <div class="card-header">
                 <div class="header-title">
@@ -459,8 +459,8 @@ const User = ({
                 </ul>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
+          </div> */}
+          {/* <div class="col-lg-4 col-md-6">
             <div class="card card-block card-stretch card-height">
               <div class="card-header">
                 <div class="header-title">
@@ -512,8 +512,8 @@ const User = ({
                 </ul>
               </div>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
+          </div> */}
+          {/* <div class="col-md-6 col-lg-4">
             <div class="card card-block card-stretch card-height">
               <div class="card-header">
                 <div class="header-title">
@@ -575,7 +575,7 @@ const User = ({
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

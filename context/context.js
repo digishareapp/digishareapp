@@ -272,21 +272,52 @@ export const CONTEXT_Provider = ({ children }) => {
             GOLD_PLAN_FEE.toString(),
             "ether"
           );
+
           const Plan = [
             {
               plan: "Basic",
               price: PLAN_1,
               cradit: 20,
+              subscription: {
+                duration: "1 month",
+                features: [
+                  "Access to basic features",
+                  "Share and trade digital assets",
+                  "Secure transactions",
+                  "Basic customer support",
+                  "Regular updates",
+                ],
+              },
             },
             {
               plan: "Silver",
               price: PLAN_2,
               cradit: 50,
+              subscription: {
+                duration: "6 months",
+                features: [
+                  "Access to all basic features",
+                  "Share and trade digital assets",
+                  "Enhanced security features",
+                  "Priority customer support",
+                  "Frequent updates",
+                ],
+              },
             },
             {
               plan: "Gold",
               price: PLAN_3,
               cradit: 100,
+              subscription: {
+                duration: "1 year",
+                features: [
+                  "Access to all features",
+                  "Share and trade digital assets",
+                  "Advanced security features",
+                  "Premium customer support",
+                  "Instant updates",
+                ],
+              },
             },
           ];
           setMemberships(Plan);

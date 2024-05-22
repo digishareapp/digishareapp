@@ -44,36 +44,19 @@ const Price = ({ memberships, BUY_CRADIT }) => {
                               : "100 Cradit"}
                           </h4>
                           <ul class="list-unstyled mb-0 pricing-list">
-                            <li>
-                              <i class="lar  text-primary mr-2 font-size-20">
-                                <TiTick />
-                              </i>
-                              Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                              <i class="lar  text-primary mr-2 font-size-20">
-                                <TiTick />
-                              </i>
-                              Consectetur adipiscing elit.
-                            </li>
-                            <li>
-                              <i class="lar  text-primary mr-2 font-size-20">
-                                <TiTick />
-                              </i>
-                              Integer molestie at massa.
-                            </li>
-                            <li>
-                              <i class="lar  text-primary mr-2 font-size-20">
-                                <TiTick />
-                              </i>
-                              Facilisis in pretium nisl aliquet.
-                            </li>
-                            <li>
-                              <i class="lar  text-primary mr-2 font-size-20">
-                                <TiTick />
-                              </i>
-                              Nulla volutpat aliquam velit.
-                            </li>
+                            {plan.subscription.features.map(
+                              (feature, index) => (
+                                <li>
+                                  <i
+                                    key={index}
+                                    class="lar  text-primary mr-2 font-size-20"
+                                  >
+                                    <TiTick />
+                                  </i>
+                                  {feature}
+                                </li>
+                              )
+                            )}
                           </ul>{" "}
                           <a
                             onClick={() => BUY_CRADIT(plan)}
@@ -85,111 +68,6 @@ const Price = ({ memberships, BUY_CRADIT }) => {
                       </div>
                     </div>
                   ))}
-
-                  {/* <div class="col-lg-4 col-sm-6">
-                    <div class="card card-block card-stretch card-height blog pricing-details">
-                      <div class="card-body border text-center rounded">
-                        <div class="pricing-header bg-success text-white">
-                          <div class="icon-data">
-                            <i class="">
-                              <FaRegStar />
-                            </i>
-                          </div>
-                          <h2 class="mb-4 display-5 font-weight-bolder text-white">
-                            $26<small class="font-size-14">/ Month</small>
-                          </h2>
-                        </div>
-                        <h4 class="mb-3">Max Usage</h4>
-                        <ul class="list-unstyled mb-0 pricing-list">
-                          <li>
-                            <i class="lar  text-primary mr-2 font-size-20">
-                              <TiTick />
-                            </i>
-                            Lorem ipsum dolor sit amet.
-                          </li>
-                          <li>
-                            <i class="lar  text-primary mr-2 font-size-20">
-                              <TiTick />
-                            </i>
-                            Consectetur adipiscing elit.
-                          </li>
-                          <li>
-                            <i class="lar  text-primary mr-2 font-size-20">
-                              <TiTick />
-                            </i>
-                            Integer molestie at massa.
-                          </li>
-                          <li>
-                            <i class="lar  text-primary mr-2 font-size-20">
-                              <TiTick />
-                            </i>
-                            Facilisis in pretium nisl aliquet.
-                          </li>
-                          <li>
-                            <i class="lar  text-primary mr-2 font-size-20">
-                              <TiTick />
-                            </i>
-                            Nulla volutpat aliquam velit.
-                          </li>
-                        </ul>{" "}
-                        <a href="#" class="btn btn-success mt-5">
-                          Start Starter
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="card card-block card-stretch card-height blog pricing-details">
-                      <div class="card-body border text-center rounded">
-                        <div class="pricing-header bg-danger text-white">
-                          <div class="icon-data">
-                            <i class="">
-                              <FaRegStar />
-                            </i>
-                          </div>
-                          <h2 class="mb-4 display-5 font-weight-bolder text-white">
-                            $26<small class="font-size-14">/ Month</small>
-                          </h2>
-                        </div>
-                        <h4 class="mb-3">Max Usage</h4>
-                        <ul class="list-unstyled mb-0 pricing-list">
-                          <li>
-                            <i class="lar  text-primary mr-2 font-size-20">
-                              <TiTick />
-                            </i>
-                            Lorem ipsum dolor sit amet.
-                          </li>
-                          <li>
-                            <i class="lar  text-primary mr-2 font-size-20">
-                              <TiTick />
-                            </i>
-                            Consectetur adipiscing elit.
-                          </li>
-                          <li>
-                            <i class="lar  text-primary mr-2 font-size-20">
-                              <TiTick />
-                            </i>
-                            Integer molestie at massa.
-                          </li>
-                          <li>
-                            <i class="lar  text-primary mr-2 font-size-20">
-                              <TiTick />
-                            </i>
-                            Facilisis in pretium nisl aliquet.
-                          </li>
-                          <li>
-                            <i class="lar  text-primary mr-2 font-size-20">
-                              <TiTick />
-                            </i>
-                            Nulla volutpat aliquam velit.
-                          </li>
-                        </ul>{" "}
-                        <a href="#" class="btn btn-danger mt-5">
-                          Start Starter
-                        </a>
-                      </div>
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </div>
