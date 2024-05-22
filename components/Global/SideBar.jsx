@@ -220,6 +220,14 @@ const SideBar = ({
                 data-parent="#iq-sidebar-toggle"
               >
                 <li class=" ">
+                  <a onClick={() => setOpenComponent("User")}>
+                    <i class="las ">
+                      <FaRegUser />
+                    </i>
+                    <span>User Profile</span>
+                  </a>
+                </li>
+                {/* <li class=" ">
                   <a
                     href="#user"
                     class="collapsed"
@@ -267,7 +275,7 @@ const SideBar = ({
                       </a>
                     </li>
                   </ul>
-                </li>
+                </li> */}
               </ul>
             </li>
           </ul>

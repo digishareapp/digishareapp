@@ -227,38 +227,7 @@ const Header = ({ currentUser, setOpenComponent }) => {
                   >
                     <div class="card shadow-none m-0">
                       <div class="card-body p-0">
-                        <div class="p-3">
-                          <a href="#" class="iq-sub-card pt-0">
-                            <i>
-                              <TbDeviceMobileQuestion />
-                            </i>
-                            Help
-                          </a>
-                          <a href="#" class="iq-sub-card">
-                            <i>
-                              <MdTipsAndUpdates />
-                            </i>
-                            Training
-                          </a>
-                          <a href="#" class="iq-sub-card">
-                            <i>
-                              <RxUpdate />
-                            </i>
-                            Updates
-                          </a>
-                          <a href="#" class="iq-sub-card">
-                            <i>
-                              <MdOutlinePolicy />
-                            </i>
-                            Terms and Policy
-                          </a>
-                          <a href="#" class="iq-sub-card">
-                            <i>
-                              <RiFeedbackFill />
-                            </i>
-                            Send Feedback
-                          </a>
-                        </div>
+                        <div class="p-3"></div>
                       </div>
                     </div>
                   </div>
@@ -288,18 +257,6 @@ const Header = ({ currentUser, setOpenComponent }) => {
                               <CiSettings />
                             </i>{" "}
                             Settings
-                          </a>
-                          <a href="#" class="iq-sub-card">
-                            <i>
-                              <FaFileLines />
-                            </i>{" "}
-                            Get Drive for desktop
-                          </a>
-                          <a href="#" class="iq-sub-card">
-                            <i>
-                              <FaKeyboard />
-                            </i>{" "}
-                            Keyboard Shortcuts
                           </a>
                         </div>
                       </div>
