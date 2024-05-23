@@ -8,7 +8,7 @@ import FileSharingDApp from "./FileSharingDApp.json";
 export const FILE_SHARING_ADDRESS =
   "0xFD71B02dc467d6126381818cCae65f23B4AD7a50";
 const FILE_SHARING_ABI = FileSharingDApp.abi;
-
+// filecoin calibration testnet
 const FileCoin = {
   chainId: 314159,
   name: "Filecoin - Calibration testnet",
