@@ -4,7 +4,6 @@ import Web3Modal from "web3modal";
 // INTERNAL IMPORT
 import FileSharingDApp from "./FileSharingDApp.json";
 
-// FILESHARING
 export const FILE_SHARING_ADDRESS =
   "0x36a5eB4E208Aa48F9Ca92595F1E67Aa3fBEc90e5";
 const FILE_SHARING_ABI = FileSharingDApp.abi;
