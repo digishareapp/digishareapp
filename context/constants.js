@@ -11,14 +11,14 @@ const FILE_SHARING_ABI = FileSharingDApp.abi;
 
 const BitTorrent = {
   chainId: 2442,
-  name: "Polygon zkEVM Cardona Testnet",
+  name: "Filecoin - Calibration testnet",
   currency: {
-    name: "Polygon zkEVM Cardona Testnet",
-    symbol: "ETH",
+    name: "Filecoin - Calibration testnet",
+    symbol: "tFIL",
     decimals: 18,
   },
-  rpcUrls: ["https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public"],
-  blockExplorerUrls: ["https://cardona-zkevm.polygonscan.com"],
+  rpcUrls: ["https://filecoin-calibration.chainup.net/rpc/v1"],
+  blockExplorerUrls: ["https://calibration.filscan.io"],
 };
 
 const fetchContract = (signer, ABI, ADDRESS) =>
