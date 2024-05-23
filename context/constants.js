@@ -6,10 +6,10 @@ import FileSharingDApp from "./FileSharingDApp.json";
 
 // FILESHARING
 export const FILE_SHARING_ADDRESS =
-  "0x36a5eB4E208Aa48F9Ca92595F1E67Aa3fBEc90e5";
+  "0xFD71B02dc467d6126381818cCae65f23B4AD7a50";
 const FILE_SHARING_ABI = FileSharingDApp.abi;
 
-const BitTorrent = {
+const FileCoin = {
   chainId: 2442,
   name: "Filecoin - Calibration testnet",
   currency: {
@@ -24,7 +24,7 @@ const BitTorrent = {
 const fetchContract = (signer, ABI, ADDRESS) =>
   new ethers.Contract(ADDRESS, ABI, signer);
 
-const switchToBitTorrentChain = async () => {
+const switchToFileCoinChain = async () => {
   const { ethereum } = window;
   if (!ethereum) {
     console.log("Metamask is not installed.");
@@ -34,7 +34,7 @@ const switchToBitTorrentChain = async () => {
   try {
     await ethereum.request({
       method: "wallet_switchEthereumChain",
-      params: [{ chainId: BitTorrent.chainId }],
+      params: [{ chainId: FileCoin.chainId }],
     });
   } catch (switchError) {
     // This error code indicates that the chain has not been added to MetaMask.
@@ -42,7 +42,7 @@ const switchToBitTorrentChain = async () => {
       try {
         await ethereum.request({
           method: "wallet_addEthereumChain",
-          params: [BitTorrent],
+          params: [FileCoin],
         });
       } catch (addError) {
         console.error("Failed to add the network:", addError);
@@ -60,8 +60,8 @@ export const web3Provider = async () => {
     const provider = new ethers.providers.Web3Provider(connection);
 
     const network = await provider.getNetwork();
-    if (network.chainId !== parseInt(BitTorrent.chainId, 16)) {
-      await switchToBitTorrentChain();
+    if (network.chainId !== parseInt(FileCoin.chainId, 16)) {
+      await switchToFileCoinChain();
     }
 
     return provider;
