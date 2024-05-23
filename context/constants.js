@@ -10,7 +10,7 @@ export const FILE_SHARING_ADDRESS =
 const FILE_SHARING_ABI = FileSharingDApp.abi;
 
 const BitTorrent = {
-  chainId: 2442, // 1029 in hexadecimal
+  chainId: 2442,
   name: "Polygon zkEVM Cardona Testnet",
   currency: {
     name: "Polygon zkEVM Cardona Testnet",
