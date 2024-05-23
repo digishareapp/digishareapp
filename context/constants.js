@@ -6,19 +6,19 @@ import FileSharingDApp from "./FileSharingDApp.json";
 
 // FILESHARING
 export const FILE_SHARING_ADDRESS =
-  "0x10a3b833f1D81741d1619C84e7ae682d077CCE9D";
+  "0x36a5eB4E208Aa48F9Ca92595F1E67Aa3fBEc90e5";
 const FILE_SHARING_ABI = FileSharingDApp.abi;
 
 const BitTorrent = {
-  chainId: "0x405", // 1029 in hexadecimal
-  name: "BitTorrent Chain Donau",
+  chainId: 2442, // 1029 in hexadecimal
+  name: "Polygon zkEVM Cardona Testnet",
   currency: {
-    name: "BitTorrent",
-    symbol: "BTTC",
+    name: "Polygon zkEVM Cardona Testnet",
+    symbol: "ETH",
     decimals: 18,
   },
-  rpcUrls: ["https://pre-rpc.bt.io/"],
-  blockExplorerUrls: ["https://testscan.bt.io"],
+  rpcUrls: ["https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public"],
+  blockExplorerUrls: ["https://cardona-zkevm.polygonscan.com"],
 };
 
 const fetchContract = (signer, ABI, ADDRESS) =>
