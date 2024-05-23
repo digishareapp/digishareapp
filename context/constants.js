@@ -10,7 +10,7 @@ export const FILE_SHARING_ADDRESS =
 const FILE_SHARING_ABI = FileSharingDApp.abi;
 
 const FileCoin = {
-  chainId: 2442,
+  chainId: 314159,
   name: "Filecoin - Calibration testnet",
   currency: {
     name: "Filecoin - Calibration testnet",
