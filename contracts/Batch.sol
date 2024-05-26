@@ -74,7 +74,6 @@ interface Batch {
         uint64[] memory gasLimit
     ) external;
 
-    /// Emitted when a subcall succeeds.
     event SubcallSucceeded(uint256 index);
 
     event SubcallFailed(uint256 index);
