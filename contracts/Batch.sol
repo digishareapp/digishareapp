@@ -14,7 +14,6 @@ Batch constant BATCH_CONTRACT = Batch(BATCH_ADDRESS);
 /// @custom:address 0x0000000000000000000000000000000000000808
 interface Batch {
     /// @dev Batch multiple calls into a single transaction.
-    /// All calls are performed from the address calling this precompile.
     ///
     /// In case of one subcall reverting following subcalls will still be attempted.
     ///
