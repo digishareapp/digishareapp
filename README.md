@@ -38,7 +38,7 @@ To set up Digishare locally, follow these installation steps:
    ```sh
    git clone https://github.com/digishareapp/digishareapp
    ```
-2. Install dependencies
+2. Install dependencies.
    ```sh
    npm install
    ```
