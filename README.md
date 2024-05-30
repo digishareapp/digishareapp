@@ -73,7 +73,7 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 ### Connect with Us!
 
-- [Project Homepage](https://github.com/yourusername/digishare)
+- [Project Homepage](https://digishare.netlify.app/)
 - [Watch Our Video](https://www.youtube.com/watch?v=example)
 - [White Paper](https://drive.google.com/file/d/1BMm_8Mb6ZWAiWKO6FSPnLqltHzRREdlX/view?usp=sharing)
 - [Report Issues or Request Features](https://github.com/yourusername/digishare/issues)

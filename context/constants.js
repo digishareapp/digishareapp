@@ -9,7 +9,7 @@ export const FILE_SHARING_ADDRESS =
 const FILE_SHARING_ABI = FileSharingDApp.abi;
 
 const Cardona = {
-  chainId: 2442,
+  chainId: ethers.utils.hexValue(2442),
   name: "Polygon zkEVM Cardona Testnet",
   currency: {
     name: "Polygon zkEVM Cardona Testnet",
