@@ -1,6 +1,17 @@
 import React, { useState } from "react";
+import { ethers } from "ethers";
 import { switchToCardonaChain, web3Provider } from "../../context/constants";
-
+const Cardona = {
+  chainId: ethers.utils.hexValue(2442),
+  name: "Polygon zkEVM Cardona Testnet",
+  currency: {
+    name: "Polygon zkEVM Cardona Testnet",
+    symbol: "ETH",
+    decimals: 18,
+  },
+  rpcUrls: ["https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public"],
+  blockExplorerUrls: ["https://cardona-zkevm.polygonscan.com"],
+};
 const SignUp = ({ SIGN_UP, connect, address, setSignUp, setLogin }) => {
   const [user, setUser] = useState({
     fullname: "",
