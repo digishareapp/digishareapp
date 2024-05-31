@@ -7,6 +7,7 @@ Digishare is a revolutionary decentralized platform designed to facilitate the s
 ### Key Features 🌟
 
 - **Decentralized Asset Storage**: Utilizes IPFS for storing all data and integrates with the Filecoin Virtual Machine (FVM) to leverage decentralized storage solutions, enhancing security and data permanence.
+- **Digital Market Place**: Buy a licensed software or assets via blockchain
 - **Secure Sharing Mechanism**: Ensures that digital assets are shared with robust encryption and blockchain-based permissions.
 - **Monobean Integration**: Batches transactions efficiently, reducing costs and improving transaction speed on the blockchain.
 - **Flexible Membership Plans**: Various plans are available to accommodate different user needs and storage requirements.
