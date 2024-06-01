@@ -245,7 +245,7 @@ const Upload = ({
                         onClick={() => setOpenComponent("Price")}
                         class="btn btn-primary"
                       >
-                        Buy Cradit
+                        Buy Credit
                       </button>
                     ) : (
                       <button

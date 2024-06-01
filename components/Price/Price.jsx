@@ -38,10 +38,10 @@ const Price = ({ memberships, BUY_CRADIT }) => {
                           </div>
                           <h4 class="mb-3">
                             {index == 0
-                              ? "20 Cradit"
+                              ? "20 Credit"
                               : index == 1
-                              ? "50 Cradit"
-                              : "100 Cradit"}
+                              ? "50 Credit"
+                              : "100 Credit"}
                           </h4>
                           <ul class="list-unstyled mb-0 pricing-list">
                             {plan.subscription.features.map(
