@@ -131,14 +131,6 @@ const Upload = ({
                       <option>PDF</option>
                     </select>
                   </div>
-                  {/* <div class="form-group">
-                    <label for="furl">Notic</label>
-                    <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Alias consequatur inventore laudantium exercitationem
-                      tempore amet error itaque!
-                    </p>
-                  </div> */}
                 </form>
               </div>
             </div>
